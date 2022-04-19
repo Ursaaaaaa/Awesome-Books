@@ -11,7 +11,7 @@ const books = [
     },
   ];
   
-  const bookListSection = document.querySelector('#book-list');
+  const bookListSection = document.querySelector('#added-booklist');
   
   function displayBooksList(bookList) {
     bookListSection.innerHTML = bookList.map((book) => `
