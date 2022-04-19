@@ -1,13 +1,18 @@
 const books = [
     {
-      title: 'Life and Living',
-      author: 'John Doe',
+      title: 'The Strange Man',
+      author: 'Amu Djoleto',
       id: 1,
     },
     {
-      title: 'Becoming',
-      author: 'Michelle Obama',
+      title: 'Human Machine',
+      author: 'Michael Bay',
       id: 2,
+    },
+    {
+      title: 'Things Fall Apart',
+      author: 'Chinhua Achebe',
+      id: 3,
     },
   ];
   
@@ -35,7 +40,7 @@ const books = [
   
   displayBooksList(getBookList());
   
-  const addBook = document.querySelector('#add-book');
+  const addBook = document.querySelector('#added-book');
   addBook.addEventListener('submit', function (event) {
     event.preventDefault();
     const title = event.target.querySelector('#title').value;
