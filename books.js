@@ -1,30 +1,63 @@
-let books = [];
-const add = document.querySelector('#add-button');
-const title = document.querySelector('#title');
-const author = document.querySelector('#author');
+const books = [
+    {
+      title: 'Life and Living',
+      author: 'John Doe',
+      id: 1,
+    },
+    {
+      title: 'Becoming',
+      author: 'Michelle Obama',
+      id: 2,
+    },
+  ];
+  
+  const bookListSection = document.querySelector('#book-list');
+  
+  function displayBooksList(bookList) {
+    bookListSection.innerHTML = bookList.map((book) => `
+  <p class="title">${book.title}</p>
+              <p>${book.author}</p>
+              <button data-id=${book.id} class="remove">Remove</button>
+              <hr>`).join('');
+  }
+  
+  function storeBook(bookList) {
+    localStorage.setItem('bookList', JSON.stringify(bookList));
+  }
 
-add.addEventListener('click', (e) => {
-    e.preventDefault();
-    const addedBook = new Book(title.value, author.value);
-    addedBook.addBook(books);
-    title.value = '';
-    author.value = '';
-    console.log(addedBook);
-});
-
-class Book {
-    constructor(title, author) {
-        this.title = title;
-        this.author = author;
+  function getBookList() {
+    const bookListFromLocalStorage = localStorage.getItem('bookList');
+    if (bookListFromLocalStorage) {
+      return JSON.parse(bookListFromLocalStorage);
     }
-}
-
-document.querySelector('#add-button').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const title = document.querySelector('#title').value;
-    const author = document.querySelector('#author').value;
-
-    const book = new Book(title, author);
-
-    console.log(book);
-});
+    return books;
+  }
+  
+  displayBooksList(getBookList());
+  
+  const addBook = document.querySelector('#add-book');
+  addBook.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const title = event.target.querySelector('#title').value;
+    const author = event.target.querySelector('#author').value;
+    const bookList = getBookList();
+    const id = bookList.length + 1;
+    bookList.push({
+      title,
+      author,
+      id,
+    });
+    this.reset();
+    displayBooksList(bookList);
+    storeBook(bookList);
+  });
+  
+  bookListSection.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove')) {
+      const { id } = event.target.dataset;
+      const bookList = getBookList();
+      const bookListFiltered = bookList.filter((book) => book.id !== +id);
+      displayBooksList(bookListFiltered);
+      storeBook(bookListFiltered);
+    }
+  });
