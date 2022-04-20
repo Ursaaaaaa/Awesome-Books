@@ -42,3 +42,7 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
+.btn {
+  margin-left: 161%;
+}
