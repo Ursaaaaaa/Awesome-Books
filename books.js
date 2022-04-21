@@ -35,7 +35,9 @@ class BookClass {
   }
 
   static showBooks() {
-    const booksCode = books.map((book) => new BookClass(book.title, book.author, book.id).bookCode());
+    const booksCode = books
+      .map((book) => new BookClass(book.title, book.author, book.id)
+        .bookCode());
     bookList.innerHTML = booksCode.join('');
     const deleteBtn = document.querySelectorAll('.remove');
     deleteBtn.forEach((el) => {
@@ -48,19 +50,6 @@ class BookClass {
   }
 }
 const storeBooks = JSON.parse(localStorage.getItem('books'));
-
-// function showBooks() {
-//   const booksCode = books.map((book) => new BookClass(book.title, book.author, book.id).bookCode());
-//   bookList.innerHTML = booksCode.join('');
-//   const deleteBtn = document.querySelectorAll('.remove');
-//   deleteBtn.forEach((el) => {
-//     el.addEventListener('click', (e) => {
-//       const id = e.target.getAttribute('data-id');
-//       BookClass.remove(id);
-//       showBooks();
-//     });
-//   });
-// }
 
 if (storeBooks) {
   books = storeBooks;
