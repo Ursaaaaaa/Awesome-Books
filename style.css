@@ -97,12 +97,28 @@ form {
   font-weight: 700;
 }
 
+
+#add-new {
+  display: none;
+}
+
+#contact {
+  display: none;
+  text-align:center ;
+}
+
 footer {
   display: flex;
   background: #3e3c3c;
   color: white;
   height: 52px;
   font-size: 9px;
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95.5%;
 }
 

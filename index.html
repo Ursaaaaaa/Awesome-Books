@@ -12,38 +12,44 @@
       <div class="logo"><a href="#Logo">Magic Goose Books</a></div>
       <nav class="hamb-menu">
         <ul>
-          <li><a href="#Portfolio">Book List</a></li>
-          <li><a href="#About"> Add New</a></li>
-          <li><a href="#Contact"> Contact</a></li>
+          <li><a id="list-menu" href="#list">Book List</a></li>
+          <li><a id="form-menu" href="#add-new"> Add New</a></li>
+          <li><a id="contact-menu" href="#contact"> Contact</a></li>
         </ul>
       </nav>
       <div class="date"></div>
     </header>
-    <h1>All Awesome Books</h1>
-    <section id="added-booklist" class="books"></section>
-    <hr id="breaker" />
-    <h2>Add a new Book</h2>
-    <form id="added-book">
-      <div>
-        <label for="title"></label>
-        <input type="text" id="title" placeholder="Title" required />
-      </div>
-      <div>
-        <label for="author"></label>
-        <input type="text" id="author" placeholder="Author" required />
-      </div>
-      <div><button type="submit" id="add-button" class="btn">Add</button></div>
-    </form>
 
-    <section class="contact">
-      <header>
-        <h2>Contact Information</h2>
-      </header>
+    <section id="list">
+      <h1>All Awesome Books</h1>
+      <div id="added-booklist" class="books"></div>
+    </section>
+    <section id="add-new">
+      <hr id="breaker" />
+      <h2>Add a new Book</h2>
+      <form id="added-book">
+        <div>
+          <label for="title"></label>
+          <input type="text" id="title" placeholder="Title" required />
+        </div>
+        <div>
+          <label for="author"></label>
+          <input type="text" id="author" placeholder="Author" required />
+        </div>
+        <div>
+          <button type="submit" id="add-button" class="btn">Add</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Information</h2>
+
       <article>
-        <p
-          >Do you have any question or just want to say "Hello"? <br />
-          You can reach out to us!</p
-        >
+        <p>
+          Do you have any question or just want to say "Hello"? <br />
+          You can reach out to us!
+        </p>
         <ul class="contact-list">
           <li>Our mail</li>
           <li>Our phone number</li>
