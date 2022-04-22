@@ -14,7 +14,7 @@ header {
   align-items: center;
 }
 
-ul {
+.nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ ul {
   padding-left: 10px;
 }
 
-li a {
+.list a {
   flex-direction: column;
   padding-right: 25px;
   color: #fff;
@@ -48,6 +48,11 @@ li a {
   color: #fff;
 }
 
+.date {
+  text-align: end;
+  margin-right: 10px;
+  font-family: 'Courier New', Courier,monospace;
+}
 
 h1 {
   font-family: 'Roboto', sans-serif;
@@ -104,7 +109,17 @@ form {
 
 #contact {
   display: none;
-  text-align:center ;
+}
+
+.contact-text {
+  text-align:center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  line-height: 9vh;
+}
+
+.contact-list {
+  padding-left: 35%;
 }
 
 footer {

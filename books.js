@@ -8,6 +8,7 @@ const contactMenu = document.querySelector('#contact-menu');
 const formSec = document.querySelector('#add-new');
 const listSec = document.querySelector('#list');
 const contSec = document.querySelector('#contact');
+const date = document.querySelector('.date');
 
 listMenu.addEventListener('click', () => {
   formSec.style.display = 'none';
@@ -94,3 +95,11 @@ form.addEventListener('submit', (e) => {
   titleInput.value = '';
   authorInput.value = '';
 });
+
+const currentDate = () => {
+  const newDate = new Date();
+  date.innerHTML = `${newDate.toDateString()}, ${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}pm `;
+  setTimeout(currentDate, 1000);
+};
+
+window.onload = currentDate();
