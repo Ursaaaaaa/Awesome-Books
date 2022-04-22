@@ -44,5 +44,10 @@ form {
 }
 
 .btn {
-  margin-left: 161%;
+  margin-left: 200%;
+  box-shadow: 3px 3px #000;
+  padding: 5px;
+  font-size: 10px;
+  border: 2px solid #000;
+  font-weight: 700;
 }
