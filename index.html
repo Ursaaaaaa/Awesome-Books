@@ -8,21 +8,57 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1>All Awesome Books</h1>
-    <section id="added-booklist" class="books"></section>
-    <hr id="breaker" />
-    <h2>Add a new Book</h2>
-    <form id="added-book">
-      <div>
-        <label for="title"></label>
-        <input type="text" id="title" placeholder="Title" required />
-      </div>
-      <div>
-        <label for="author"></label>
-        <input type="text" id="author" placeholder="Author" required />
-      </div>
-      <div><button type="submit" id="add-button" class="btn">Add</button></div>
-    </form>
+    <header>
+      <div class="logo"><a href="#Logo">Magic Goose Books</a></div>
+      <nav class="hamb-menu">
+        <ul class="nav-list">
+          <li class="list"><a id="list-menu" href="#list">Book List</a></li>
+          <li class="list"><a id="form-menu" href="#add-new"> Add New</a></li>
+          <li class="list"><a id="contact-menu" href="#contact"> Contact</a></li>
+        </ul>
+      </nav>
+      <div class="date"></div>
+    </header>
+
+    <section id="list">
+      <h1>All Awesome Books</h1>
+      <div id="added-booklist" class="books"></div>
+    </section>
+    <section id="add-new">
+      <hr id="breaker" />
+      <h2>Add a new Book</h2>
+      <form id="added-book">
+        <div>
+          <label for="title"></label>
+          <input type="text" id="title" placeholder="Title" required />
+        </div>
+        <div>
+          <label for="author"></label>
+          <input type="text" id="author" placeholder="Author" required />
+        </div>
+        <div>
+          <button type="submit" id="add-button" class="btn">Add</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2 class="contact-text">Contact Information</h2>
+
+        <p  class="contact-text">
+          Do you have any question or just want to say "Hello"? <br />
+          You can reach out to us!
+        </p>
+        <ul class="contact-list">
+          <li>Our mail</li>
+          <li>Our phone number</li>
+          <li>Our Address</li>
+        </ul>
+    </section>
+
+    <footer>
+      <h2>Copyright @ Magic Goose Publishers</h2>
+    </footer>
 
     <script src="books.js"></script>
   </body>
