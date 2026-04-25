@@ -40,11 +40,7 @@ This is an example of how to list things you need to use the software and how to
 
 ## Authors
 
-👤 **Nii Amanor Djoleto**
 
-- GitHub: [@ramrod433](https://github.com/ramrod433)
-- Twitter: [@\_Djoleto](https://twitter.com/_djoleto_)
-- LinkedIn: [Nii Amanor Djoleto](https://linkedin.com/in/nii-amanor-djoleto-072b8a14a)
 
 👤 **Faith Dinma**
 
